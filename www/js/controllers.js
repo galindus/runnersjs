@@ -69,7 +69,22 @@ function HomeCtrl($scope, $routeParams){
     // Init map
     var map = new google.maps.Map(mapdiv, mapOptions);
     // Wait for phonegap ready and locate user
-    app.ggeolocateUser(map);
-    
-	console.log($scope, $routeParams);
+    function onSuccess(location){
+        var position = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
+        var infowindow = new google.maps.InfoWindow({
+            map: map,
+            position: position,
+            content: 'You are here'
+            });
+
+        map.setCenter(position);
+    }
+
+    function onError(){
+        alert("cant locate user");
+    }
+    $scope.locate = function(){
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+	
 };
