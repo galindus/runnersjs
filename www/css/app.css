@@ -1,0 +1,76 @@
+body{
+  background: #D3D3D3;
+}
+
+
+div{
+  display: block;
+}
+
+#navbar{
+  position: absolute;  
+  width: 100%;
+  height: 50px;
+  background: black;
+  bottom: 0px;
+}
+.navbar-button{
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  float: left;
+}
+
+#home{
+  background: url('../img/monoicons/home32.png') no-repeat center center;  
+}
+
+#practice{
+  background: url('../img/monoicons/gear32.png') no-repeat center center;
+}
+
+.leave-setup, .enter-setup {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -ms-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+#map .viewport{
+  width: 94%;
+  height: 400px;
+}
+.animate-container {
+  position:relative;  
+}
+ 
+.animate-container > * {
+  display:block;
+  width:100%;
+  border-left:1px solid black;  
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:10px;
+}
+ 
+.enter-setup {
+  left:100%;
+}
+.enter-setup.enter-start {
+  left:0;
+}
+ 
+.leave-setup { }
+.leave-setup.leave-start {
+  left:-100%;
+}
+#information label{
+  float: left;  
+}
+#information span{
+  float: left;
+  clear: both;
+}
