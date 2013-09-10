@@ -38,6 +38,7 @@ function PracticeCtrl($scope, $routeParams){
     	$scope.time = $scope.time + 3;        
     	$scope.distance = google.maps.geometry.spherical.computeDistanceBetween(path.getAt(0), last);
     	$scope.speed = location.coords.speed;    	        
+        console.log(location);
     }
     // Some error happened ouch!
     function onError(location){
@@ -45,11 +46,9 @@ function PracticeCtrl($scope, $routeParams){
     }
 
     // Start practice!
-    $scope.startPractice = function(){
-    	setInterval(function(){    		
-    		//Try gps geolocation        
-        	navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
-    	},3000);	
+    $scope.startPractice = function(){    			
+		//Try gps geolocation        
+    	navigator.geolocation.watchPosition(onSuccess, onError, {enableHighAccuracy:true,frequency: 3000 });    		
     }
 
 };
