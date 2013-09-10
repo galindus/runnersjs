@@ -50,7 +50,7 @@ function PracticeCtrl($scope, $routeParams){
         	navigator.geolocation.getCurrentPosition(onSuccess, onError);
     	},3000);	
     }
-}
+};
 
 
 function HomeCtrl($scope, $routeParams){
@@ -69,4 +69,4 @@ function HomeCtrl($scope, $routeParams){
     runners.ggeolocateUser(map);
     
 	console.log($scope, $routeParams);
-}
+};

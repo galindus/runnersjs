@@ -34,5 +34,6 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         angular.bootstrap(document, ['runnersApp']);
+        alert('bootstrap started!');
     },   
 };

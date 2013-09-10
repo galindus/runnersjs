@@ -1,16 +1,19 @@
-var runners = angular.module('runnersApp', []).
-	config(['$routeProvider', function($routeProvider){
-		//use animation		
-		$routeProvider.
-			when('/practice', {
-				templateUrl: '../partials/practice.html', 
-				controller: PracticeCtrl}).
-			when('/home', {
-				templateUrl: '../partials/home.html', 
-				controller: HomeCtrl}
-			).
-			otherwise({redirectTo: '/home'});
-	}]);
+var runners = {};
+
+runners = angular.module('runnersApp', []);
+
+runners.config(['$routeProvider', function($routeProvider){
+	//use animation		
+	$routeProvider.
+		when('/practice', {
+			templateUrl: '../partials/practice.html', 
+			controller: PracticeCtrl}).
+		when('/home', {
+			templateUrl: '../partials/home.html', 
+			controller: HomeCtrl}
+		).
+		otherwise({redirectTo: '/home'});
+}]);
 
 // Geolocates user on the map if possible
 runners.ggeolocateUser = function(map){
