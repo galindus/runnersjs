@@ -36,10 +36,13 @@ div{
   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
 }
-
+#map{
+  width: 300px;
+  height: 420px;
+}
 #map .viewport{
   width: 94%;
-  height: 400px;
+  height: 100%;
 }
 .animate-container {
   position:relative;  
