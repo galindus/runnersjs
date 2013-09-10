@@ -78,6 +78,7 @@ function HomeCtrl($scope, $routeParams){
             });
 
         map.setCenter(position);
+        console.log(location, map);
     }
 
     function onError(){
