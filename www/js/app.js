@@ -48,7 +48,6 @@ var app = {
                 ).
                 otherwise({redirectTo: '/home'});
         }]);
-
         angular.bootstrap(document, ['runnersApp']);        
     },
     ggeolocateUser: function(map){
