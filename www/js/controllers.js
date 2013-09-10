@@ -7,7 +7,8 @@ function PracticeCtrl($scope, $routeParams){
 	// Initialize map
 	var mapOptions = {
                         zoom: 15,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center: new google.maps.LatLng(-33, 151)
                     }
                     
     // Set map div to display.
@@ -50,7 +51,7 @@ function PracticeCtrl($scope, $routeParams){
         	navigator.geolocation.getCurrentPosition(onSuccess, onError);
     	},3000);	
     }
-    
+
 };
 
 
@@ -58,7 +59,8 @@ function HomeCtrl($scope, $routeParams){
 	// Initialize map
 	var mapOptions = {
                         zoom: 15,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center: new google.maps.LatLng(-33, 151)
                     }
                     
     // Set map div to display.
