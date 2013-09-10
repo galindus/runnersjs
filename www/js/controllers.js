@@ -16,7 +16,7 @@ function PracticeCtrl($scope, $routeParams){
     // Init map
     var map = new google.maps.Map(mapdiv, mapOptions);
     // Wait for phonegap ready and locate user
-    var startPoint = runners.ggeolocateUser(map);
+    var startPoint = app.ggeolocateUser(map);
 
     // create polyline to draw practice on map.
     var route = new google.maps.Polyline({	    
@@ -66,7 +66,7 @@ function HomeCtrl($scope, $routeParams){
     // Init map
     var map = new google.maps.Map(mapdiv, mapOptions);
     // Wait for phonegap ready and locate user
-    runners.ggeolocateUser(map);
+    app.ggeolocateUser(map);
     
 	console.log($scope, $routeParams);
 };
