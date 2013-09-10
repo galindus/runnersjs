@@ -48,7 +48,7 @@ function PracticeCtrl($scope, $routeParams){
     $scope.startPractice = function(){
     	setInterval(function(){    		
     		//Try gps geolocation        
-        	navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        	navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
     	},3000);	
     }
 
@@ -85,7 +85,7 @@ function HomeCtrl($scope, $routeParams){
         alert("cant locate user");
     }
     $scope.locate = function(){
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
     }
 	
 };
