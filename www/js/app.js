@@ -40,17 +40,16 @@ var app = {
             //use animation     
             $routeProvider.
                 when('/practice', {
-                    templateUrl: '/partials/practice.html', 
+                    templateUrl: 'partials/practice.html', 
                     controller: PracticeCtrl}).
                 when('/home', {
-                    templateUrl: '/partials/home.html', 
+                    templateUrl: 'partials/home.html', 
                     controller: HomeCtrl}
                 ).
                 otherwise({redirectTo: '/home'});
         }]);
 
-        angular.bootstrap(document, ['runnersApp']);
-        alert('bootstrap started!');
+        angular.bootstrap(document, ['runnersApp']);        
     },
     ggeolocateUser: function(map){
         var IWGelocation = new google.maps.Marker({
