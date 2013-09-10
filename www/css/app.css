@@ -43,6 +43,7 @@ div{
 #map .viewport{
   width: 339px;
   height: 420px;
+  type: 'fit';
 }
 .animate-container {
   position:relative;  
