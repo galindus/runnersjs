@@ -14,7 +14,7 @@ function PracticeCtrl($scope, $routeParams){
     var mapdiv = document.querySelector('#map .viewport');                    
 
     // Init map
-    var map = new google.maps.Map(mapdiv, mapOptions);
+    var map = new google.maps.Map(mapdiv, mapOptions);    
     // Wait for phonegap ready and locate user
     var startPoint = app.ggeolocateUser(map);
 
@@ -50,6 +50,7 @@ function PracticeCtrl($scope, $routeParams){
         	navigator.geolocation.getCurrentPosition(onSuccess, onError);
     	},3000);	
     }
+    google.maps.event.trigger(map, "resize");
 };
 
 
@@ -67,6 +68,6 @@ function HomeCtrl($scope, $routeParams){
     var map = new google.maps.Map(mapdiv, mapOptions);
     // Wait for phonegap ready and locate user
     app.ggeolocateUser(map);
-    
+    google.maps.event.trigger(map, "resize");
 	console.log($scope, $routeParams);
 };
